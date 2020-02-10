@@ -25,7 +25,7 @@ public class Account {
 		return number;
 	}
 
-	public void setNumber(String number) {
+	private void setNumber(String number) {
 		this.number = number;
 	}
 
@@ -33,7 +33,7 @@ public class Account {
 		return balance;
 	}
 
-	public void setBalance(double balance) {
+	private void setBalance(double balance) {
 		this.balance = balance;
 	}
 
@@ -41,7 +41,7 @@ public class Account {
 		return owner;
 	}
 
-	public void setOwner(Client owner) {
+	private void setOwner(Client owner) {
 		this.owner = owner;
 	}
 	
