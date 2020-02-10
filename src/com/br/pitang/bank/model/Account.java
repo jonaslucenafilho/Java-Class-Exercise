@@ -41,5 +41,14 @@ public class Account {
 		this.owner = owner;
 	}
 	
+	public double credit (double value) {
+		this.balance += value;
+		return this.balance;
+	}
+	
+	public double debit (double value) {
+		this.balance -= value;
+		return this.balance;
+	}
 	
 }
