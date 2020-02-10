@@ -16,6 +16,10 @@ public class Account {
 		this.balance = balance;
 		this.owner = owner;
 	}
+	
+	public Account() {
+		
+	}
 
 	public String getNumber() {
 		return number;
