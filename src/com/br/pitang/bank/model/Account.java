@@ -51,8 +51,15 @@ public class Account {
 	}
 	
 	public double debit (double value) {
-		this.balance -= value;
-		return this.balance;
+		if (value > this.getBalance()) {
+			System.out.println("A operação não pode ser realizada!");
+			System.out.println("Saldo insuficiente!");
+			return this.balance;
+		} else {
+			this.balance -= value;
+			System.out.println("Operação realizada com sucesso!");
+			return this.balance;
+		}
 	}
 	
 	public void transfer (Account destinyAccount, double value) {
