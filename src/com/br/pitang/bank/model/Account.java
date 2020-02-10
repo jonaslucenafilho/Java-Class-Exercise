@@ -55,4 +55,10 @@ public class Account {
 		return this.balance;
 	}
 	
+	public void transfer (Account originAccount, Account destinyAccount, double value) {
+		originAccount.debit(value);
+		destinyAccount.credit(value);
+		
+	}
+	
 }
