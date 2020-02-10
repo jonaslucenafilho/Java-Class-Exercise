@@ -32,6 +32,12 @@ public class BankApplication {
 		System.out.println("O valor do saldo da conta a1 é de R$ " + a1.getBalance());
 		System.out.println("O valor do saldo da conta a2 é de R$ " + a2.getBalance());
 		System.out.println();
+		
+		a1.transfer(a2, 200.5);
+		
+		System.out.println("O valor do saldo da conta a1 é de R$ " + a1.getBalance());
+		System.out.println("O valor do saldo da conta a2 é de R$ " + a2.getBalance());
+		System.out.println();
 	}
 
 }
