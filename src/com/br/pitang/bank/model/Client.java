@@ -4,7 +4,7 @@ public class Client {
 	
 	private String name;
 	private String cpf;
-	ClientType clientType;
+	private ClientType clientType;
 	
 	public Client (String name, String cpf, ClientType clientType ) {
 		this.name = name;
@@ -32,12 +32,20 @@ public class Client {
 		this.cpf = cpf;
 	}
 	
-	public ClientType getClienttype() {
-		return clienttype;
+	public ClientType getClientType() {
+		return clientType;
 	}
 
-	public void setClienttype(ClientType clienttype) {
-		this.clienttype = clienttype;
+	public void setClientType(ClientType clientType) {
+		this.clientType = clientType;
 	}
 
+	public String toString() {
+		return "Nome: "
+			+ getName() 
+			+ " CPF: "
+			+ getCpf()
+			+ " Tipo Cliente: "
+			+ getClientType();
+	}
 }
