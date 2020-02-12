@@ -4,6 +4,7 @@ public class Client {
 	
 	private String name;
 	private String cpf;
+	ClientType clienttype;
 	
 	public Client (String name, String cpf ) {
 		this.name = name;
@@ -15,7 +16,7 @@ public class Client {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -23,11 +24,19 @@ public class Client {
 	}
 
 	public String getCpf() {
-		return cpf;
+		return this.cpf;
 	}
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+	
+	public ClientType getClienttype() {
+		return clienttype;
+	}
+
+	public void setClienttype(ClientType clienttype) {
+		this.clienttype = clienttype;
 	}
 
 }
