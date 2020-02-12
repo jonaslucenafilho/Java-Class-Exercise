@@ -4,17 +4,16 @@ public class Account {
 
 	private String number;
 	private double balance;
-	private Client owner;
+	private Client client;
 	
-	public Account (String number, Client owner) {
+	public Account (String number, Client client) {
 		this.number = number;
-		this.owner = owner;
+		this.client = client;
 	}
 
-	public Account(String number, double balance, Client owner) {
-		this.number = number;
+	public Account(String number, double balance, Client client) {
+		this(number, client);
 		this.balance = balance;
-		this.owner = owner;
 	}
 	
 	public Account() {
@@ -22,7 +21,7 @@ public class Account {
 	}
 
 	public String getNumber() {
-		return number;
+		return this.number;
 	}
 
 	private void setNumber(String number) {
@@ -30,19 +29,19 @@ public class Account {
 	}
 
 	public double getBalance() {
-		return balance;
+		return this.balance;
 	}
 
 	private void setBalance(double balance) {
 		this.balance = balance;
 	}
 
-	public Client getOwner() {
-		return owner;
+	public Client getClient() {
+		return this.client;
 	}
 
-	private void setOwner(Client owner) {
-		this.owner = owner;
+	private void setClient(Client client) {
+		this.client = client;
 	}
 	
 	public double credit (double value) {
@@ -63,8 +62,14 @@ public class Account {
 	}
 	
 	public void transfer (Account destinyAccount, double value) {
-		debit(value);
-		destinyAccount.credit(value);
+		if (value > this.getBalance()) {
+			System.out.println("A operação não pode ser realizada!");
+			System.out.println("Saldo insuficiente!");
+		} else {
+			debit(value);
+			destinyAccount.credit(value);
+		}
+		
 		
 	}
 	
