@@ -4,11 +4,12 @@ public class Client {
 	
 	private String name;
 	private String cpf;
-	ClientType clienttype;
+	ClientType clientType;
 	
-	public Client (String name, String cpf ) {
+	public Client (String name, String cpf, ClientType clientType ) {
 		this.name = name;
 		this.cpf = cpf;
+		this.clientType = clientType;
 	}
 	
 	public Client() {
